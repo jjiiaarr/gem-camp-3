@@ -1,30 +1,21 @@
-<h1 style="color:White;">Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
 
-<h1 style="color:White;">Post List</h1>
 
-<body style="background-image: url('https://d32myzxfxyl12w.cloudfront.net/images/blog_images/be602627973000d99f6ba9a43aba117b82aa5e26.jpg?1649061518');" >
+<h1 style="text-align:center;color:White">Posts#index</h1>
+<p style="text-align:center;color:White">Find me in app/views/posts/index.html.erb</p>
+<h1 style="text-align:center;color:White" >Post List</h1>
 
-<style>
 
-    table,thead, td {
-        border: 10px solid #ddd;
-        border-color: antiquewhite;
-        padding: 5px;
-        text-align: left;
-        background-color: white;
-    }
-</style>
+<body background = "https://d32myzxfxyl12w.cloudfront.net/images/blog_images/be602627973000d99f6ba9a43aba117b82aa5e26.jpg?1649061518">
 
- <table>
-     <thead>
+<table style="border:5px solid white;margin-left:auto;margin-right:auto;color:White">
+     <thead style="text-align:center;">
 
-     <td>title</td>
-     <td>content</td>
-     <td>action</td>
+     <td>Title</td>
+     <td>Content</td>
+     <td>Action</td>
    </thead>
      <% @posts.each do |post| %>
-        <tr>
+        <tr style="height:50px">
          <td> <%= post.title %></td>
          <td><%= post.content %></td>
         <td></td>
@@ -37,5 +28,5 @@
        </tr>
        <% end %>
    </table>
-<%= link_to 'New', new_post_path %>
+<%= link_to 'New Post', new_post_path %>
 </body>
