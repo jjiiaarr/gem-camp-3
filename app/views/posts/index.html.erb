@@ -1,0 +1,41 @@
+<h1 style="color:White;">Posts#index</h1>
+<p>Find me in app/views/posts/index.html.erb</p>
+
+<h1 style="color:White;">Post List</h1>
+
+<body style="background-image: url('https://d32myzxfxyl12w.cloudfront.net/images/blog_images/be602627973000d99f6ba9a43aba117b82aa5e26.jpg?1649061518');" >
+
+<style>
+
+    table,thead, td {
+        border: 10px solid #ddd;
+        border-color: antiquewhite;
+        padding: 5px;
+        text-align: left;
+        background-color: white;
+    }
+</style>
+
+ <table>
+     <thead>
+
+     <td>title</td>
+     <td>content</td>
+     <td>action</td>
+   </thead>
+     <% @posts.each do |post| %>
+        <tr>
+         <td> <%= post.title %></td>
+         <td><%= post.content %></td>
+        <td></td>
+          <td>
+                     <%= link_to 'Show', post_path(post) %>
+                     <%= link_to 'Edit', edit_post_path(post) %>
+                     <%= button_to 'Delete', post_path(post), method: :delete %>
+
+          </td>
+       </tr>
+       <% end %>
+   </table>
+<%= link_to 'New', new_post_path %>
+</body>
