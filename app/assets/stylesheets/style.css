@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+    background-image: url("https://149455152.v2.pressablecdn.com/wp-content/uploads/2019/05/Pay-What-You-Want-Complete-Ruby-on-Rails-Master-Class-Bundle.jpg");
+    color: #ffffff;
+    line-height: 1.8;
+}
+
+/* Home Page */
+
+* Navbar */
+#navbar {
+    background: #333;
+    color: #fff;
+    overflow: auto;
+}
+
+#navbar a {
+    color: #fff;
+}
+
+#navbar h1 {
+    float: left;
+    padding-top: 20px;
+}
+
+#navbar ul {
+    list-style: none;
+    float: right;
+}
+
+#navbar ul li {
+    float: left;
+}
+
+#navbar ul li a {
+    display: block;
+    padding: 20px;
+    text-align: center;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.current {
+    background: #444;
+    color: #f7c08a;
+}
+
+
+/* Index Page */
+
+h1 {
+     text-align: center;
+     padding-top: 100px;
+    padding-bottom: 50px;
+ }
+
+ table {
+     text-align: center;
+     align-items: center;
+     align-content: center;
+     justify-content: center;
+     padding-left: 100px;
+     border-color: #ffffff;
+     display: table;
+     margin-right: auto;
+     margin-left: auto;
+ }
+.new-post {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    border: 3px solid rgb(252, 70, 100);
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(252, 70, 100);
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    transform: translateX(0);
+}
+
+ /* Show page */
+.title {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.show-content {
+    padding-top: 20px;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* New Post Page */
+
+.flex-container {
+    display: flex;
+    height: 100px;
+    text-align: center;
+    justify-content: center;
+    align-items:center;
+    padding-top: 50px;
+}
+
+/* Footer */
+#main-footer {
+    text-align: center;
+    background: transparent;
+    color: #fff;
+    padding: 10px 10px 0px 10px;
+    position: fixed;
+    bottom: 0;
+}
+#icons a {
+    text-decoration: none;
+    color: white;
+}
+.del-btn{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+}

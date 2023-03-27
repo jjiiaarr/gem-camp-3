@@ -1,6 +1,9 @@
 <!-- app/views/posts/edit.html.erb  -->
 
 <h1>Edit Post id: <%= @post.id %></h1>
-
+<div class="flex-container">
 <%= render partial: 'form', locals: { post: @post } %>
-<%= link_to 'Index', posts_path %>
+</div>
+<div class="new-post">
+  <%= link_to 'Index', posts_path, class:"btn" %>
+</div>

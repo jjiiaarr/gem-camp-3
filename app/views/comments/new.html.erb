@@ -1,0 +1,8 @@
+
+
+<h1>Title: <%= @post.title %></h1>
+<div class="flex-container">
+<%= render partial: 'form', locals: { post: @post, comment: @comment, path: post_comments_path(@post) } %> </div>
+<div class="new-post">
+  <%= link_to 'Index', posts_path, class:"btn" %>
+</div>

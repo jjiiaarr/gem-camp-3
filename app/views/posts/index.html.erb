@@ -1,32 +1,30 @@
 
+<h1>Post List</h1>
+<table>
+  <thead>
 
-<h1 style="text-align:center;color:White">Posts#index</h1>
-<p style="text-align:center;color:White">Find me in app/views/posts/index.html.erb</p>
-<h1 style="text-align:center;color:White" >Post List</h1>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Action</th>
+  </thead>
+
+   <% @posts.each do |post| %>
+    <tr style="height:50px">
+      <td> <%= post.title %></td>
+      <td><%= post.content %></td>
+      <td id="icons">
+        <%= link_to '', post_path(post),class:"fa-solid fa-eye-slash fa-bounce"%>
+        <%= link_to '', edit_post_path(post),class:"fa-solid fa-pen fa-bounce"%>
+        <%= button_to '', post_path(post), class:"del-btn fa-solid fa-trash fa-bounce", method: :delete%>
+        <%= link_to '', post_comments_path(post),class:"fa-solid fa-comment fa-bounce"%>
+        <%= link_to '', new_post_comment_path(post),class:"fa-solid fa-pen-to-square fa-bounce"%>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<div class="new-post">
+<%= link_to 'New Post', new_post_path, class:"btn"%>
+</div>
 
 
-<body background = "https://d32myzxfxyl12w.cloudfront.net/images/blog_images/be602627973000d99f6ba9a43aba117b82aa5e26.jpg?1649061518">
 
-<table style="border:5px solid white;margin-left:auto;margin-right:auto;color:White">
-     <thead style="text-align:center;">
-
-     <td>Title</td>
-     <td>Content</td>
-     <td>Action</td>
-   </thead>
-     <% @posts.each do |post| %>
-        <tr style="height:50px">
-         <td> <%= post.title %></td>
-         <td><%= post.content %></td>
-        <td></td>
-          <td>
-                     <%= link_to 'Show', post_path(post) %>
-                     <%= link_to 'Edit', edit_post_path(post) %>
-                     <%= button_to 'Delete', post_path(post), method: :delete %>
-
-          </td>
-       </tr>
-       <% end %>
-   </table>
-<%= link_to 'New Post', new_post_path %>
-</body>

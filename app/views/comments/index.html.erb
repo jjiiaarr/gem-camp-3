@@ -1,0 +1,17 @@
+
+
+<h1><%= @post.title %></h1>
+<h2 style="text-align: center">Comments</h2>
+<ul class="flex-container">
+  <% @comments.each do |comment| %>
+    <li>
+      <%= comment.content %>(<%= comment.created_at %>)
+      <%= link_to 'Edit', edit_post_comment_path(@post, comment) %>
+      <%= button_to 'Delete', post_comment_path(@post, comment), method: :delete %>
+    </li>
+  <% end %>
+</ul>
+
+<div class="new-post">
+  <%= link_to 'Index', posts_path, class:"btn" %>
+</div>
