@@ -7,6 +7,7 @@
     <th>Content</th>
     <th>Category</th>
     <th>User</th>
+    <th>Comments count</th>
     <th>Action</th>
 
   </thead>
@@ -16,6 +17,7 @@
       <td> <%= post.title %></td>
       <td><%= post.content %></td>
       <td><%= post.user&.email %></td>
+      <td><%= post.comments_count %></td>
       <td><%= post.categories.pluck(:name).join(',') %></td>
       <td id="icons">
         <%= link_to '', post_path(post),class:"fa-solid fa-eye-slash fa-bounce"%>
