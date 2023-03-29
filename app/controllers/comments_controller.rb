@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
   end
 
   def index
-    @comments = @post.comments.includes(:user).page(params[:page]).per(5)
+    @comments = @post.comments.includes(:user)
   end
 
   def new

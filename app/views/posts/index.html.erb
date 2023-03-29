@@ -1,14 +1,15 @@
 
 <h1>Post List</h1>
+
 <table>
   <thead>
 
-    <th>Title</th>
-    <th>Content</th>
-    <th>Category</th>
-    <th>User</th>
-    <th>Comments count</th>
-    <th>Action</th>
+    <td>Title</td>
+    <td>Content</td>
+    <td>User</td>
+    <td>Comments count</td>
+    <td>Category</td>
+    <td>Action</td>
 
   </thead>
 
@@ -30,7 +31,6 @@
   <% end %>
 </table>
 <div class="new-post">
-  <%= paginate @comments %>
 <%= link_to 'New Post', new_post_path, class:"btn"%>
 </div>
 

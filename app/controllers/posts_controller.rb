@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :validate_post_owner, only: [:edit, :update, :destroy]
 
+
   def index
     @posts = Post.includes(:categories, :user).page(params[:page]).per(5)
   end
