@@ -30,6 +30,7 @@
   <% end %>
 </table>
 <div class="new-post">
+  <%= paginate @comments %>
 <%= link_to 'New Post', new_post_path, class:"btn"%>
 </div>
 
