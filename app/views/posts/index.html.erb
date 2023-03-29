@@ -15,12 +15,12 @@
     <tr style="height:50px">
       <td> <%= post.title %></td>
       <td><%= post.content %></td>
-      <td><%= post.user.email %></td>
+      <td><%= post.user&.email %></td>
       <td><%= post.categories.pluck(:name).join(',') %></td>
       <td id="icons">
         <%= link_to '', post_path(post),class:"fa-solid fa-eye-slash fa-bounce"%>
-        <%= link_to '', edit_post_path(post),class:"fa-solid fa-pen fa-bounce"%>
-        <%= button_to '', post_path(post), class:"del-btn fa-solid fa-trash fa-bounce", method: :delete%>
+        <%= link_to '', edit_post_path(post), class: "fa-solid fa-pen fa-bounce" if user_signed_in? && post.user == current_user %>
+        <%= button_to '', post_path(post), class:"del-btn fa-solid fa-trash fa-bounce", method: :delete if user_signed_in? && post.user == current_user %>
         <%= link_to '', post_comments_path(post),class:"fa-solid fa-comment fa-bounce"%>
         <%= link_to '', new_post_comment_path(post),class:"fa-solid fa-pen-to-square fa-bounce"%>
       </td>
