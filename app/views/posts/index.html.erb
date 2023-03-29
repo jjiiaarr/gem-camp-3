@@ -6,6 +6,7 @@
     <th>Title</th>
     <th>Content</th>
     <th>Category</th>
+    <th>User</th>
     <th>Action</th>
 
   </thead>
@@ -14,6 +15,7 @@
     <tr style="height:50px">
       <td> <%= post.title %></td>
       <td><%= post.content %></td>
+      <td><%= post.user.email %></td>
       <td><%= post.categories.pluck(:name).join(',') %></td>
       <td id="icons">
         <%= link_to '', post_path(post),class:"fa-solid fa-eye-slash fa-bounce"%>
