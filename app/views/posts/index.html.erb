@@ -30,8 +30,10 @@
     </tr>
   <% end %>
 </table>
+<%= paginate @posts %>
+<%= link_to 'Export', posts_path(format: :csv) %>
 <div class="new-post">
-<%= link_to 'New Post', new_post_path, class:"btn"%>
+  <%= link_to 'New Post', new_post_path, class: "btn" %>
 </div>
 
 
