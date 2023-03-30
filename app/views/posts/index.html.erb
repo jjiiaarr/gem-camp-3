@@ -1,11 +1,11 @@
 
-<h1>Post List</h1>
+<h1><%= t('post_list') %></h1>
 
 <table>
   <thead>
 
-    <td>Title</td>
-    <td>Content</td>
+  <td><%= Post.human_attribute_name(:title) %></td>
+  <td><%= Post.human_attribute_name(:content) %></td>
     <td>User</td>
     <td>Comments count</td>
     <td>Category</td>
